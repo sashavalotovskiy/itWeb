@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ItWeb</title>
+    <script type="text/javascript" src="build/bundle.js"></script>
+
+    <style>
+       html, body, #map {
+        	height: 100%;
+    	}
+    	#map {
+        	width: 100%;
+    	}
+    	#distance {
+    		width: 100%;
+    		max-width: 320px;
+    		min-height: 100px;
+    		position: absolute;
+    		top: 10px;
+    		left: 10px;
+    		z-index: 9999;
+    		background: #fff;
+    		display: none;
+    	}
+    	#calculate {
+    		width: 100%;
+		    padding: 5px 0;
+		    background: #9585E9;
+		    border: 1px solid #371dbf;
+    	}
+    </style>
+</head>
+<body>
+	<div id="distance">
+		<button id="calculate">Calculate Distance</button>
+		<div id="addresses"></div>
+	</div>
+	<div id="map"></div>
+
+    <script>
+		function initMap() {
+			window.GooGleMap.init();
+		}
+		window.onload = GooGleMap.events;
+    </script>
+    <script defer async src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
+</body>
+</html>
